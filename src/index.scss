@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.part {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  border: 1px dotted rgba(255, 255, 255, 0.4);
+  @media screen and (max-width: 600px) {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+.part-selector-image {
+  width: 165px;
+  @media screen and (max-width: 600px) {
+    width: 25vw;
+  }
+}
+.top {
+  border-bottom: none;
+}
+
+.left {
+  border-right: none;
+}
+
+.right {
+  border-left: none;
+}
+
+.bottom {
+  border-top: none;
+}
+
+.left .part-selector-image {
+  transform: rotate(-90deg);
+}
+
+.right .part-selector-image {
+  transform: rotate(90deg);
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  z-index: 10;
+}
+.prev-center-button {
+  left: 0;
+  top: 50%;
+  transform: translateY(-40%) translateX(-40%);
+}
+.next-center-button {
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%) translateX(40%);
+}
+.prev-top-button {
+  left: 50%;
+  top: 0;
+  transform: translateY(-40%) translateX(-40%);
+}
+.next-bottom-button {
+  left: 50%;
+  bottom: 0;
+  transform: translateY(40%) translateX(-40%);
+}
+
+.preview-bot {
+  width: 210px;
+  height: 210px;
+  padding: 5px;
+}
+.preview-activator {
+  width: 200px;
+  border-radius: 0 !important;
+}
+.preview-bot .preview-content {
+  border: 1px solid #999;
+  padding: 10px 0;
+}
+.preview-bot img {
+  width: 50px;
+  height: 50px;
+}
+.preview-bot .rotate-right {
+  transform: rotate(90deg);
+}
+.preview-bot .rotate-left {
+  transform: rotate(-90deg);
+}
+.preview-bot .top-row {
+  display:flex;
+  justify-content: space-around;
+}
+.preview-bot .middle-row {
+  display:flex;
+  justify-content: center;
+}
+.preview-bot .bottom-row {
+  display:flex;
+  justify-content: space-around;
+  border-top: none;
+}
