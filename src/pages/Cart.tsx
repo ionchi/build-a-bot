@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import 'pages/Cart.css';
+import 'pages/Cart.scss';
 import { activePromoCodes } from 'helpers/demo-data';
 import { AppContext } from 'helpers/PartsProvider';
 import CartHeader from 'components/CartHeader';

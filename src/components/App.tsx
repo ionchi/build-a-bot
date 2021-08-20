@@ -1,5 +1,4 @@
 import React from 'react';
-import 'components/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Box, Container } from '@material-ui/core';
 import PartsProvider from 'helpers/PartsProvider';
