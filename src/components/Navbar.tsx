@@ -55,12 +55,12 @@ export const Navbar = () => {
 							variant="button"
 							color="text.primary"
 							to={ el.link }
-							sx={ { my: 1, mx: 1.5 } }
+							sx={ { my: 1, mx: 2 } }
 						>
 							{ el.name }
 						</Link>
 					)) }
-					<Badge color="secondary" variant="dot" invisible={ !showBadge }>
+					<Badge color="secondary" variant="dot" invisible={ !showBadge } style={ { margin: '0 15px' } }>
 						<ShoppingCart onClick={ () => goToCart() } style={ { cursor: 'pointer' } } />
 					</Badge>
 				</nav>

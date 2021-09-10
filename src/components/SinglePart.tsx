@@ -26,7 +26,6 @@ const SinglePart: FunctionComponent<Props> = (props: Props) => {
 					</strong>
 				</div>
 				<div className='wrapper'>
-					<h5>{part.type}</h5>
 					<p>{part.description}</p>
 				</div>
 				<div className='purchase'>

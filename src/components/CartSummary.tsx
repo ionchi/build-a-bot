@@ -8,9 +8,10 @@ interface Props {
 	tax: number;
 	onEnterPromoCode: (event: React.ChangeEvent<HTMLInputElement>) => void;
 	checkPromoCode: () => void;
+	onCheckOut: () => void;
 }
 
-const CartSummary = ({ subTotal, discount, tax, onEnterPromoCode, checkPromoCode }: Props) => {
+const CartSummary = ({ subTotal, discount, tax, onEnterPromoCode, checkPromoCode, onCheckOut }: Props) => {
 	const total = subTotal - discount + tax;
 
 	return (
@@ -68,6 +69,7 @@ const CartSummary = ({ subTotal, discount, tax, onEnterPromoCode, checkPromoCode
 						variant="contained"
 						color="primary"
 						style={ { borderRadius: 0 } }
+						onClick={ onCheckOut }
 					>
 						Check Out
 					</Button>

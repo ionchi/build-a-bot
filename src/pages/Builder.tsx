@@ -3,7 +3,7 @@ import { Box } from '@material-ui/core';
 import { AppContext } from 'helpers/PartsProvider';
 import PartSelector from 'components/PartSelector';
 import { AcmeBot, Direction, Part } from 'helpers/types';
-import BotPreview from 'components/BotPreview';
+import BotPreviewCollapse from 'components/BotPreviewCollapse';
 
 export const Builder = () => {
 	const { parts } = useContext(AppContext);
@@ -101,7 +101,7 @@ export const Builder = () => {
 			>
 				{
 					selectedBot && (
-						<BotPreview selectedBot={ selectedBot } />
+						<BotPreviewCollapse selectedBot={ selectedBot } />
 					)
 				}
 			</Box>

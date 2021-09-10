@@ -6,7 +6,7 @@ import { Box } from '@material-ui/core';
 interface Props {
 	products: AcmeBot[];
 	price: number;
-	onRemoveProduct: (index: number) => void;
+	onRemoveProduct: ({ hideToast }: { hideToast: boolean }) => void;
 }
 
 const CartList = ({ products, price, onRemoveProduct }: Props) => {
@@ -62,7 +62,7 @@ const CartList = ({ products, price, onRemoveProduct }: Props) => {
 								<div>
 									<div className="remove">
 										<svg
-											onClick={ () => onRemoveProduct(index) }
+											onClick={ () => onRemoveProduct({ hideToast: false }) }
 											version="1.1"
 											className="close"
 											x="0px"
